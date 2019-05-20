@@ -3,6 +3,7 @@ package de.vit_bund.lehre.m08.autohafen;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
 public class Autocontainer {
 	private String zielort;
 	private int zaehlerAutos;
@@ -13,20 +14,25 @@ public class Autocontainer {
 		setZielort(zielort);
 		setAnzahlAutos(anzahlAutos);
 		setInhalt(new Auto[getAnzahlAutos()]);
-//		setZaehlerAutos(0);
+		setZaehlerAutos(0);
 		
 	}
 	
 	public void addAuto(Auto auto) {
-		
+		if (zaehlerAutos<=anzahlAutos) {
+			inhalt[zaehlerAutos] = auto;
+			setZaehlerAutos(this.zaehlerAutos++);}
+		else {
+				System.out.println("container is fully loaded");
+			}
+		}
 //		ArrayList<Auto> buchliste = new ArrayList<Auto>(Arrays.asList(getInhalt()));
 //		while (buchliste.remove(null));	
 //		buchliste.add(auto);
 //		setInhalt(buchliste.toArray(getInhalt()));
-	}
 	
 	public void printAutoliste() {
-		;
+		System.out.println(Arrays.toString(getInhalt()));
 		}
 
 	
