@@ -32,7 +32,9 @@ public class Autocontainer {
 //		setInhalt(buchliste.toArray(getInhalt()));
 	
 	public void printAutoliste() {
-		System.out.println(Arrays.toString(getInhalt()).);
+		for(Auto autoliste : getInhalt()) {
+			autoliste.gibInfos();
+		}
 		}
 
 	
