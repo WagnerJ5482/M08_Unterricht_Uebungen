@@ -23,7 +23,7 @@ public class Auto {
 	}
 	
 	public double berechnePreisNeu(double prozenSatz) {
-		return getPreis()-(getPreis()*(prozenSatz/100));
+		return (getPreis()*(1-prozenSatz));
 		
 	}
 

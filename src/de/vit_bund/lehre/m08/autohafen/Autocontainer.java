@@ -14,10 +14,11 @@ public class Autocontainer {
 		setAnzahlAutos(anzahlAutos);
 		setInhalt(new Auto[getAnzahlAutos()]);
 //		setZaehlerAutos(0);
-		;		
+		
 	}
 	
 	public void addAuto(Auto auto) {
+		
 //		ArrayList<Auto> buchliste = new ArrayList<Auto>(Arrays.asList(getInhalt()));
 //		while (buchliste.remove(null));	
 //		buchliste.add(auto);
@@ -25,7 +26,7 @@ public class Autocontainer {
 	}
 	
 	public void printAutoliste() {
-		System.out.println(Arrays.toString(getInhalt()));
+		;
 		}
 
 	
