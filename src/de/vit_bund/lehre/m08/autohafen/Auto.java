@@ -3,16 +3,28 @@ package de.vit_bund.lehre.m08.autohafen;
 public class Auto {
 	private String name;
 	private String hersteller;
-	private String frabe;
+	private String farbe;
 	private boolean cabriolet;
 	private double preis;
 	
+	public Auto(String name, String hersteller, String farbe, boolean cabriolet, double preis) {
+		setName(name);
+		setHersteller(hersteller);
+		setFarbe(farbe);
+		setCabriolet(cabriolet);
+		setPreis(preis);
+	}
+	
 	public void gibInfos() {
-		
+		System.out.print("Name: "+getName()+";");
+		System.out.print("Hersteller: "+getHersteller()+";");
+		System.out.print("Farbe: "+getFarbe()+" kg;");
+		System.out.print("Preis "+getPreis()+";");	
 	}
 	
 	public double berechnePreisNeu(double prozenSatz) {
-		return 0.0;
+		return getPreis()-(getPreis()*(prozenSatz/100));
+		
 	}
 
 	public String getName() {
@@ -31,12 +43,12 @@ public class Auto {
 		this.hersteller = hersteller;
 	}
 
-	public String getFrabe() {
-		return frabe;
+	public String getFarbe() {
+		return farbe;
 	}
 
-	public void setFrabe(String frabe) {
-		this.frabe = frabe;
+	public void setFarbe(String farbe) {
+		this.farbe = farbe;
 	}
 
 	public boolean isCabriolet() {
