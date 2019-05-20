@@ -8,19 +8,24 @@ public class Autoverladung {
 		Auto auto3 = new Auto("Espace","Renault","crimson",false,38800.00);
 		Auto auto4 = new Auto("A8","Audi","nachtblau",false, 84160.00);
 		
-		auto1.gibInfos();
-		System.out.println();
-		auto2.gibInfos();
-		System.out.println();
-		auto3.gibInfos();
-		System.out.println();
-		auto4.gibInfos();
-		System.out.println();
+//		auto1.gibInfos();
+//		System.out.println();
+//		auto2.gibInfos();
+//		System.out.println();
+//		auto3.gibInfos();
+//		System.out.println();
+//		auto4.gibInfos();
+//		System.out.println();
+//		
+//		System.out.println(auto1.berechnePreisNeu(14));
+//		System.out.println(auto2.berechnePreisNeu(14));
+//		System.out.println(auto3.berechnePreisNeu(14));
+//		System.out.println(auto4.berechnePreisNeu(14));
 		
-		System.out.println(auto1.berechnePreisNeu(14));
-		System.out.println(auto2.berechnePreisNeu(14));
-		System.out.println(auto3.berechnePreisNeu(14));
-		System.out.println(auto4.berechnePreisNeu(14));
+		Autocontainer autocontainer1 = new Autocontainer("Sydney", 3);
+		autocontainer1.addAuto(auto1);
+		autocontainer1.printAutoliste();
+		
 		
 	}
 }

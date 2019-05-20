@@ -18,7 +18,7 @@ public class Auto {
 	public void gibInfos() {
 		System.out.print("Name: "+getName()+";");
 		System.out.print("Hersteller: "+getHersteller()+";");
-		System.out.print("Farbe: "+getFarbe()+" kg;");
+		System.out.print("Farbe: "+getFarbe()+";");
 		System.out.print("Preis "+getPreis()+";");	
 	}
 	

@@ -11,20 +11,29 @@ public class Autocontainer {
 	private Auto[] inhalt;
 	
 	public Autocontainer(String zielort, int anzahlAutos) {
-		setInhalt(new Auto[anzahlAutos]);
 		setZielort(zielort);
-		setAnzahlAutos(anzahlAutos);		
+		setAnzahlAutos(anzahlAutos);
+		setInhalt(new Auto[getAnzahlAutos()]);
+		setZaehlerAutos(0);
+		;		
 	}
 	
 	public void addAuto(Auto auto) {
-		List<Auto> autocontainer = Arrays.asList(getInhalt());
-		autocontainer.add(auto);
-		setInhalt(autocontainer.toArray(getInhalt()));
+		
+		if (getZaehlerAutos()<getAnzahlAutos()) {
+				inhalt[getZaehlerAutos()] = auto;
+				setZaehlerAutos(this.zaehlerAutos++);
+		}
+		
+//		List<Auto> autocontainer = Arrays.asList(getInhalt());
+//		autocontainer.add(auto);
+//		setInhalt(autocontainer.toArray(getInhalt()));
 	}
 	
 	public void printAutoliste() {
-		
-	}
+		System.out.println(Arrays.toString(getInhalt()));
+		}
+
 	
 	public void berechnePreisMax() {
 		
