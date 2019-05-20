@@ -24,6 +24,9 @@ public class Autoverladung {
 		
 		Autocontainer autocontainer1 = new Autocontainer("Sydney", 3);
 		autocontainer1.addAuto(auto1);
+		autocontainer1.addAuto(auto2);
+		autocontainer1.addAuto(auto3);
+		autocontainer1.addAuto(auto4);
 		autocontainer1.printAutoliste();
 		
 		
