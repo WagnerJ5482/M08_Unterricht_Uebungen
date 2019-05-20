@@ -19,9 +19,9 @@ public class Autocontainer {
 	}
 	
 	public void addAuto(Auto auto) {
-		if (zaehlerAutos<=anzahlAutos) {
+		if (zaehlerAutos<anzahlAutos) {
 			inhalt[zaehlerAutos] = auto;
-			setZaehlerAutos(this.zaehlerAutos++);}
+			this.zaehlerAutos = this.zaehlerAutos + 1;}
 		else {
 				System.out.println("container is fully loaded");
 			}
@@ -32,7 +32,7 @@ public class Autocontainer {
 //		setInhalt(buchliste.toArray(getInhalt()));
 	
 	public void printAutoliste() {
-		System.out.println(Arrays.toString(getInhalt()));
+		System.out.println(Arrays.toString(getInhalt()).);
 		}
 
 	
