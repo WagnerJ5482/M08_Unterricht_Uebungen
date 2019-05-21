@@ -22,8 +22,9 @@ public class Auto {
 		System.out.print("Preis "+getPreis()+";");	
 	}
 	
-	public double berechnePreisNeu(double prozenSatz) {
-		return (getPreis()*(1-prozenSatz));
+	public double berechnePreisNeu(double prozentSatz) {
+		setPreis(getPreis()-(getPreis()*prozentSatz/100));
+		return getPreis();
 		
 	}
 

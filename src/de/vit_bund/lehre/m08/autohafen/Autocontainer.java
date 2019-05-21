@@ -1,7 +1,9 @@
 package de.vit_bund.lehre.m08.autohafen;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+
+//import java.util.ArrayList;
+//import java.util.Arrays;
 
 
 public class Autocontainer {
@@ -21,7 +23,8 @@ public class Autocontainer {
 	public void addAuto(Auto auto) {
 		if (zaehlerAutos<anzahlAutos) {
 			inhalt[zaehlerAutos] = auto;
-			this.zaehlerAutos = this.zaehlerAutos + 1;}
+			this.zaehlerAutos++;}
+		//kürzer: inhalt[zaehlerAutos++]=auto;
 		else {
 				System.out.println("container is fully loaded");
 			}
@@ -32,14 +35,19 @@ public class Autocontainer {
 //		setInhalt(buchliste.toArray(getInhalt()));
 	
 	public void printAutoliste() {
-		for(Auto autoliste : getInhalt()) {
-			autoliste.gibInfos();
-		}
+		System.out.println(Arrays.deepToString(getInhalt()));
+//		for(Auto autoliste : getInhalt()) {
+//			autoliste.gibInfos();
+//			System.out.println();
+//		}
 		}
 
 	
 	public void berechnePreisMax() {
-		
+		for(Auto autoliste : getInhalt()) {
+			double gesamtpreis =+ autoliste.getPreis();
+			System.out.println(gesamtpreis);
+		}
 	}
 
 	public String getZielort() {
