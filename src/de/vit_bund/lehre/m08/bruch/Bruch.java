@@ -4,9 +4,24 @@ public class Bruch {
 	private int zaehler;
 	private int nenner;
 	
+	public Bruch(int zaehler, int nenner) {
+		setZaehler(zaehler);
+		setNenner(nenner);
+	}
 	
 	public void ausgabe() {
-		
+		System.out.println("Zaehler = "+getZaehler() + "Nenner = " + getNenner());
+	}
+	
+	public Bruch subtrahiere(Bruch bruch) {
+		int zaehlerNeu = getZaehler()*bruch.getNenner()-getNenner()*bruch.getZaehler();
+		int nennerNeu = getNenner()*bruch.getNenner();
+		return new Bruch(zaehlerNeu, nennerNeu);
+	}
+	public Bruch addiere(Bruch bruch) {
+		int zaehlerNeu = getZaehler()*bruch.getNenner()+getNenner()*bruch.getZaehler();
+		int nennerNeu = getNenner()*bruch.getNenner();
+		return new Bruch(zaehlerNeu, nennerNeu);
 	}
 	
 	
