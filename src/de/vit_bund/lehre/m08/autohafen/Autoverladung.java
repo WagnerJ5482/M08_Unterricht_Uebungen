@@ -28,7 +28,8 @@ public class Autoverladung {
 		autocontainer1.addAuto(auto3);
 		autocontainer1.addAuto(auto4);
 		autocontainer1.printAutoliste();
-		
+		System.out.println("-------");
+		autocontainer1.berechnePreisMax();
 		autocontainer1.kategorisiereContainer();
 	}
 }

@@ -43,10 +43,13 @@ public class Autocontainer {
 
 	
 	public void berechnePreisMax() {
+		double gesamtpreis = 0.0;
 		for(Auto autoliste : getInhalt()) {
-			double gesamtpreis =+ autoliste.getPreis();
-			System.out.println(gesamtpreis);
+			if (autoliste.getPreis()>gesamtpreis) {
+				gesamtpreis =+ autoliste.getPreis();
+			}
 		}
+		System.out.println(gesamtpreis);
 	}
 
 	public void kategorisiereContainer() {
