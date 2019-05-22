@@ -13,6 +13,13 @@ public class Auto {
 		setFarbe(farbe);
 		setCabriolet(cabriolet);
 		setPreis(preis);
+		if (this.preis >= 0.0) {
+			this.preis = preis;}
+		else {
+			this.preis = 0.0;
+			System.out.println("Preis < 0.0");}
+		
+		
 	}
 	
 	public void gibInfos() {

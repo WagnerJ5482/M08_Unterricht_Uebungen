@@ -35,7 +35,7 @@ public class Autocontainer {
 //		setInhalt(buchliste.toArray(getInhalt()));
 	
 	public void printAutoliste() {
-		System.out.println(Arrays.deepToString(getInhalt()));
+		System.out.println(Arrays.toString(getInhalt()));
 //		for(Auto autoliste : getInhalt()) {
 //			autoliste.gibInfos();
 //			System.out.println();
@@ -50,6 +50,25 @@ public class Autocontainer {
 		}
 	}
 
+	public void kategorisiereContainer() {
+		switch (zaehlerAutos) {
+		case 0:
+		case 1: 
+		case 2:
+		case 3:
+			System.out.println("leicht");
+			break;
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+			System.out.println("medium");
+			break;
+		default:
+			System.out.println("schwer");
+		}
+	}
+	
 	public String getZielort() {
 		return zielort;
 	}
