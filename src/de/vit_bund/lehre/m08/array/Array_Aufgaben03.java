@@ -94,7 +94,7 @@ public class Array_Aufgaben03 {
 //	int n =10;
 //	int i=3;
 //	if (n <=0) {
-//		System.out.println("Bader...");
+//		System.out.println("Bad...");
 //	}else {
 //	while (i<2*n) {
 //		System.out.println(i/((2*i)+1));
@@ -105,7 +105,7 @@ public class Array_Aufgaben03 {
 	int n =10;
 	double i=3;
 	if (n <=0) {
-		System.out.println("Bader...");
+		System.out.println("Bad...");
 	}else {
 		do {
 			System.out.println(i/((2*i)+1));
