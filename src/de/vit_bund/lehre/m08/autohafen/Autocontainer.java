@@ -38,7 +38,7 @@ public class Autocontainer {
 		boolean istCarbrio = false;
 		System.out.println("Zielort des Containers: " + getZielort());
 		for(Auto autoliste : getInhalt()) {
-			if (autoliste != null) {
+			if (!autoliste.equals(null)) {
 				autoliste.gibInfos();
 				System.out.println();
 				if (autoliste.isCabriolet() == true)
@@ -55,7 +55,7 @@ public class Autocontainer {
 	public void berechnePreisMax() {
 		double gesamtpreis = 0.0;
 		for(Auto autoliste : getInhalt()) {
-			if (( autoliste != null ) && (autoliste.getPreis()>gesamtpreis)) {
+			if ((!autoliste.equals(null)) && (autoliste.getPreis()>gesamtpreis)) {
 				gesamtpreis =+ autoliste.getPreis();
 			}
 		}
