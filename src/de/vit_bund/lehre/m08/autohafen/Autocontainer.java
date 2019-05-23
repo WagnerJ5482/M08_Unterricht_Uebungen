@@ -35,26 +35,37 @@ public class Autocontainer {
 //		setInhalt(buchliste.toArray(getInhalt()));
 	
 	public void printAutoliste() {
-		for(Auto autoliste : getInhalt()) {
-			autoliste.gibInfos();
-			System.out.println();
+		boolean istCarbrio = false;
+		System.out.println("Zielort des Containers: " + getZielort());
+		for(int i = 0; i< getAnzahlAutos();i++) {
+			if (inhalt[i] != null) {
+				inhalt[i].gibInfos();
+				System.out.println();
+				if (inhalt[i].isCabriolet() == true)
+					istCarbrio = true;				
+			}
 		}
-		}
-
+		if (istCarbrio == false)
+			System.out.println("Keine Cabriolets enthalten");
+		else
+			System.out.println("Achtung Cabriolets");
+	}
+	
+	
 	
 	public void berechnePreisMax() {
 		double gesamtpreis = 0.0;
-		for(Auto autoliste : getInhalt()) {
-			if (autoliste.getPreis()>gesamtpreis) {
-				gesamtpreis =+ autoliste.getPreis();
+		for(int i = 0; i<getAnzahlAutos();i++) {
+			if (( inhalt[i] != null ) && (inhalt[i].getPreis()>gesamtpreis)) {
+				gesamtpreis =+ inhalt[i].getPreis();
 			}
 		}
 		System.out.println(gesamtpreis);
 	}
 
-	public void kategorisiereContainer() {
-		switch (zaehlerAutos) {
-		case 0:
+	public void kategorisiereContainer() {		
+		switch (getZaehlerAutos()) {
+		case 0: System.out.println("Keine Autos vorhanden"); break;
 		case 1: 
 		case 2:
 		case 3:

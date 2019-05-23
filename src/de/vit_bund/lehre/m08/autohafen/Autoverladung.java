@@ -22,7 +22,7 @@ public class Autoverladung {
 		System.out.println(auto3.berechnePreisNeu(14));
 		System.out.println(auto4.berechnePreisNeu(14));
 		
-		Autocontainer autocontainer1 = new Autocontainer("Sydney", 3);
+		Autocontainer autocontainer1 = new Autocontainer("Sydney", 7);
 		autocontainer1.addAuto(auto1);
 		autocontainer1.addAuto(auto2);
 		autocontainer1.addAuto(auto3);
