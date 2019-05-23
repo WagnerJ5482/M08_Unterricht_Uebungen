@@ -64,18 +64,19 @@ public class Array_Aufgaben03 {
 	 * Schachbrett
 	 * 
 	 */
-//	int[][] matrix = new int[8][8];
-//	for (int i = 0; i<matrix.length;i++) {
-//		for (int j = 0; j<matrix[i].length;j++){
-//			matrix[i][j]=(j+i+1);
-//			if ((j+i+1)<10)				
-//				System.out.print("  "+matrix[i][j]);
-//			else
-//				System.out.print(" "+matrix[i][j]);
-//				
-//		}
-//		System.out.println();
-//	}
+	int[][] matrix = new int[8][8];
+	for (int i = 0; i<matrix.length;i++) {
+		for (int j = 0; j<matrix[i].length;j++){
+			matrix[i][j]=(j+i+1);
+//				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt
+			if ((j+i+1)<10)				
+				System.out.printf("%3d"+matrix[i][j]);
+			else
+				System.out.print(" "+matrix[i][j]);
+				
+		}
+		System.out.println();
+	}
 	/*
 	 * do-While / for / while
 	 * 
@@ -102,18 +103,18 @@ public class Array_Aufgaben03 {
 //	}
 //	}
 	//do-while
-	int n =10;
-	double i=3;
-	if (n <=0) {
-		System.out.println("Bad...");
-	}else {
-		do {
-			System.out.println(i/((2*i)+1));
-			i+=2;
-		} while (i<=2*n);
-	}
-	
-	
-	
+//	int n =10;
+//	double i=3;
+//	if (n <=0) {
+//		System.out.println("Bad...");
+//	}else {
+//		do {
+//			System.out.println(i/((2*i)+1));
+//			i+=2;
+//		} while (i<=2*n);
+//	}
+//	
+//	
+//	
 	}
 }
