@@ -2,7 +2,7 @@ package de.vit_bund.lehre.m08.array;
 
 public class Array_Aufgaben03 {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 	/*
 	 * Wochentage
 	 */
@@ -64,19 +64,19 @@ public class Array_Aufgaben03 {
 	 * Schachbrett
 	 * 
 	 */
-	int[][] matrix = new int[8][8];
-	for (int i = 0; i<matrix.length;i++) {
-		for (int j = 0; j<matrix[i].length;j++){
-			matrix[i][j]=(j+i+1);
-//				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt
-			if ((j+i+1)<10)				
-				System.out.printf("%3d"+matrix[i][j]);
-			else
-				System.out.print(" "+matrix[i][j]);
-				
-		}
-		System.out.println();
-	}
+//	int[][] matrix = new int[8][8];
+//	for (int i = 0; i<matrix.length;i++) {
+//		for (int j = 0; j<matrix[i].length;j++){
+//			matrix[i][j]=(j+i+1);
+////				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt
+//			if ((j+i+1)<10)				
+//				System.out.printf("  "+matrix[i][j]);
+//			else
+//				System.out.print(" "+matrix[i][j]);
+//				
+//		}
+//		System.out.println();
+//	}
 	/*
 	 * do-While / for / while
 	 * 
@@ -91,30 +91,54 @@ public class Array_Aufgaben03 {
 //		System.out.println(i/((2*i)+1));
 //	}
 //	}
-	// while-Schleife
-//	int n =10;
-//	int i=3;
-//	if (n <=0) {
-//		System.out.println("Bad...");
-//	}else {
-//	while (i<2*n) {
-//		System.out.println(i/((2*i)+1));
-//		i+=2;
+	/**
+// 	while-Schleife
+	int n1 =10;
+	int i1=3;
+	if (n1 >0) {
+		while (i1<2*n1) {
+//			System.out.println(i1/((2*i1)+1));
+			System.out.println(i1);
+			i1+=2;
+		}
+	}else {
+		System.out.println("Bad...");
+	}
+//	do-while
+	int n2 =10;
+	double i2=3;
+	if (n2 > 0) {
+		do {
+//			System.out.println(i2/((2*i2)+1));
+			System.out.println(i2);
+			i2+=2;
+		} while (i2<=2*n2);
+	}else {
+		System.out.println("Bad...");
+	}
+*/
+	
+	// Aufgabe while Schleife
+	int i1 =-5;
+	while (i1>0) {
+		Thread.sleep(127);  // Verzögerung: Methode muss dann Exceptions schmeißen (throws ..)
+		System.out.println(i1);
+		i1 -= 2;
+	}
+	// do-while
+	int n =-5;
+	if (n >0) {
+	do {
+		n -=2;
+		Thread.sleep(127);  // Verzögerung: Methode muss dann Exceptions schmeißen (throws ..)
+		System.out.println(n);
+//		i1 -= 2;
+	} while (n>0);}
+	
+//	// For schleife:
+//	for (int i = 10; i >0; i-=2) {
+//		System.out.println(i);
 //	}
-//	}
-	//do-while
-//	int n =10;
-//	double i=3;
-//	if (n <=0) {
-//		System.out.println("Bad...");
-//	}else {
-//		do {
-//			System.out.println(i/((2*i)+1));
-//			i+=2;
-//		} while (i<=2*n);
-//	}
-//	
-//	
-//	
+	
 	}
 }
