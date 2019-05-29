@@ -64,19 +64,19 @@ public class Array_Aufgaben03 {
 	 * Schachbrett
 	 * 
 	 */
-//	int[][] matrix = new int[8][8];
-//	for (int i = 0; i<matrix.length;i++) {
-//		for (int j = 0; j<matrix[i].length;j++){
-//			matrix[i][j]=(j+i+1);
-////				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt
-//			if ((j+i+1)<10)				
-//				System.out.printf("  "+matrix[i][j]);
-//			else
-//				System.out.print(" "+matrix[i][j]);
-//				
-//		}
-//		System.out.println();
-//	}
+	int[][] matrix = new int[8][8];
+	for (int i = 0; i<matrix.length;i++) {
+		for (int j = 0; j<matrix[i].length;j++){
+			matrix[i][j]=(j+i+1);
+//				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt ersetzt die if-Anweisung
+			if ((j+i+1)<10)				
+				System.out.printf("  "+matrix[i][j]);
+			else
+				System.out.print(" "+matrix[i][j]);
+				
+		}
+		System.out.println();
+	}
 	/*
 	 * do-While / for / while
 	 * 
@@ -119,21 +119,21 @@ public class Array_Aufgaben03 {
 */
 	
 	// Aufgabe while Schleife
-	int i1 =-5;
-	while (i1>0) {
-		Thread.sleep(127);  // Verzögerung: Methode muss dann Exceptions schmeißen (throws ..)
-		System.out.println(i1);
-		i1 -= 2;
-	}
-	// do-while
-	int n =-5;
-	if (n >0) {
-	do {
-		n -=2;
-		Thread.sleep(127);  // Verzögerung: Methode muss dann Exceptions schmeißen (throws ..)
-		System.out.println(n);
+//	int i1 =-5;
+//	while (i1>0) {
+//		Thread.sleep(127);  // Verzögerung: Methode muss dann Exceptions schmeißen (throws ..)
+//		System.out.println(i1);
 //		i1 -= 2;
-	} while (n>0);}
+//	}
+//	// do-while
+//	int n =-5;
+//	if (n >0) {
+//	do {
+//		n -=2;
+//		Thread.sleep(127);  // Verzögerung: Methode muss dann Exceptions schmeißen (throws ..)
+//		System.out.println(n);
+////		i1 -= 2;
+//	} while (n>0);}
 	
 //	// For schleife:
 //	for (int i = 10; i >0; i-=2) {
