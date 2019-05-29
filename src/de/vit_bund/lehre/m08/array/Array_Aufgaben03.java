@@ -30,53 +30,72 @@ public class Array_Aufgaben03 {
 	 * 
 	 */
 
-//	String[][] stundenplan = new String[5][4];
-//	
-//	for (int i = 0; i<stundenplan.length;i++) {
-//		for (int j=0;j<stundenplan[i].length;j++) {
-//			stundenplan[i][j]="vorlesungsfrei";	
-//			}
+	String[][] stundenplan = new String[5][4];
+	
+	for (int tagId = 0; tagId<stundenplan.length;tagId++) {
+		for (int zeID=0;zeID<stundenplan[tagId].length;zeID++) {
+			stundenplan[tagId][zeID]="vorlesungsfrei";
+			}
+		}
+	stundenplan[0][2] = "M12"; // Montag 2.Einheit
+	stundenplan[1][0] = "M12"; // Dienstag 1. Einheit
+	stundenplan[2][1] = "M08"; // Mittwoch 2. Einheit
+	stundenplan[1][1] = "M12"; // Dienstag 2. Einheit
+	stundenplan[1][3] = "Uebung M08"; // Dienstag 4. Einheit
+	
+	stundenplan[0][3] = stundenplan[0][1];
+	
+	for (int tagId = 0; tagId<stundenplan.length;tagId++) {
+		for (int zeId=0;zeId<stundenplan[tagId].length;zeId++) {
+			System.out.print(stundenplan[tagId][zeId] + "\t");	
+			}
+		System.out.println();
+		}
+
+	System.out.println(findeErsteZE(stundenplan, wochentage));
+	/*
+	 * mit for-Each Schleife
+	 */
+	
+//	int zaehler =0;
+//	for (String[] tag: stundenplan) {
+//		for ( String stunde: tag) {
+////			if (stunde == "vorlesungsfrei") zaehler++; // CompilerOptimierung
+////			if( !stunde.equals(null) && stunde.equals("vorlesungsfrei")) zaehler++;  // gut:
+//			if ("vorlesungsfrei".equals(stunde)) zaehler++;
 //		}
-//	stundenplan[1][0] = "M12";
-//	stundenplan[0][2] = "M12";
-//	stundenplan[1][2] = "M08";
-//	stundenplan[1][1] = "M12";
-//	stundenplan[3][1] = "Uebung M08";
-//	
-//	stundenplan[1][0] = stundenplan[3][0];
-//	
+//	}
+//	System.out.println(zaehler);
+	
+	
+//	// mit standard for-schleifen
+//	int zaehler2 = 0;
 //	for (int i = 0; i<stundenplan.length;i++) {
 //		for (int j=0;j<stundenplan[i].length;j++) {
-//			System.out.println("Tag: " + wochentage[i] +"; Zeiteinheit: " + (j+1) + "; Modul: "+ stundenplan[i][j]);	
-//			}
-//		}
-//	int zaehler = 0;
-//	for (int i = 0; i<stundenplan.length;i++) {
-//		for (int j=0;j<stundenplan[i].length;j++) {
-//			if(stundenplan[i][j]=="vorlesungsfrei") zaehler++;
+//			if(stundenplan[i][j]=="vorlesungsfrei") zaehler2++;
 //				
 //			}
 //		}
-//	System.out.println(zaehler);
+//	System.out.println(zaehler2);
 
 	
 	/*
 	 * Schachbrett
 	 * 
 	 */
-	int[][] matrix = new int[8][8];
-	for (int i = 0; i<matrix.length;i++) {
-		for (int j = 0; j<matrix[i].length;j++){
-			matrix[i][j]=(j+i+1);
-//				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt ersetzt die if-Anweisung
-			if ((j+i+1)<10)				
-				System.out.printf("  "+matrix[i][j]);
-			else
-				System.out.print(" "+matrix[i][j]);
-				
-		}
-		System.out.println();
-	}
+//	int[][] matrix = new int[8][8];
+//	for (int i = 0; i<matrix.length;i++) {
+//		for (int j = 0; j<matrix[i].length;j++){
+//			matrix[i][j]=(j+i+1);
+////				System.out.printf("%3d",matrix[i][j]);  // kürzer aber noch nicht bekannt ersetzt die if-Anweisung
+//			if ((j+i+1)<10)				
+//				System.out.printf("  "+matrix[i][j]);
+//			else
+//				System.out.print(" "+matrix[i][j]);
+//				
+//		}
+//		System.out.println();
+//	}
 	/*
 	 * do-While / for / while
 	 * 
@@ -88,13 +107,14 @@ public class Array_Aufgaben03 {
 //		System.out.println("Bad...");
 //	}else {
 //	for (double i=3;i<2*n;i+=2) {
-//		System.out.println(i/((2*i)+1));
+////		System.out.println(i/((2*i)+1));
+//		System.out.println(i);
 //	}
 //	}
 	/**
 // 	while-Schleife
 	int n1 =10;
-	int i1=3;
+	double i1=3;
 	if (n1 >0) {
 		while (i1<2*n1) {
 //			System.out.println(i1/((2*i1)+1));
@@ -140,5 +160,17 @@ public class Array_Aufgaben03 {
 //		System.out.println(i);
 //	}
 	
+	}
+	public static String findeErsteZE (String[][] stundenplan, String[] wochentage) {
+		for (int tagId = 0; tagId<stundenplan.length;tagId++) {
+			for (int zeId=0;zeId<stundenplan[tagId].length;zeId++) {
+				String stunde = stundenplan[tagId][zeId];
+				if ("vorlesungsfrei".equals(stunde)) {
+					continue;
+				}
+				return "Erste Stunde: Tag "+ wochentage[tagId] + " ZE "+ zeId;
+			}
+		}
+		return "Keine Vorlseungen";
 	}
 }

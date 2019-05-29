@@ -7,17 +7,17 @@ public class Buchpaket {
 	private String ueberschrift;
 	private int zaehlerBuecher;
 	private Buch[] inhalt;
-	
+
 	public Buchpaket() {
 	}
-	
+
 	public Buchpaket(String ueberschrift, int anzahlBuecher) {
 		setUeberschrift(ueberschrift);
 		setInhalt(new Buch[anzahlBuecher]);
 		setZaehlerBuecher(0);
 	}
 
-	
+
 	public void addBuch(Buch buch) {
 		if (getZaehlerBuecher()<getInhalt().length) {
 			getInhalt()[getZaehlerBuecher()] = buch;
@@ -25,13 +25,13 @@ public class Buchpaket {
 		}
 		else
 			System.out.println("Das Buchpaket ist voll");
-		
-//		ArrayList<Buch> buchliste = new ArrayList<Buch>(Arrays.asList(getInhalt()));
-//		buchliste.add(buch);
-//		while (buchliste.remove(null))
-//		setInhalt(buchliste.toArray(getInhalt()));
+
+		//		ArrayList<Buch> buchliste = new ArrayList<Buch>(Arrays.asList(getInhalt()));
+		//		buchliste.add(buch);
+		//		while (buchliste.remove(null))
+		//		setInhalt(buchliste.toArray(getInhalt()));
 	}
-	
+
 	public void printListe(){
 		System.out.println("Buchpaket " + getUeberschrift()+ ": ");
 		for(Buch printliste : getInhalt()) {
@@ -49,26 +49,26 @@ public class Buchpaket {
 			gesamtpreis += getInhalt()[zaehlerBuchliste].getPreis();
 			zaehlerBuchliste ++;
 		}
-		
+
 		// Für Arrays mit Lücken:
-//		while (zaehlerBuchliste < getInhalt().length) {
-//			Buch buch = inhalt[zaehlerBuchliste];
-//			if (buch != null) {
-//				gesamtpreis += buch.getPreis();
-//			}
-//			zaehlerBuchliste++;
-//		}
-		
+		//		while (zaehlerBuchliste < getInhalt().length) {
+		//			Buch buch = inhalt[zaehlerBuchliste];
+		//			if (buch != null) {
+		//				gesamtpreis += buch.getPreis();
+		//			}
+		//			zaehlerBuchliste++;
+		//		}
+
 		// ForEach Schleife:
-//		for(Buch buchliste : getInhalt()){
-//		if (buchliste != null) {
-//			gesamtpreis =+ buchliste.getBruttopreis();
-//		}
-//		}
-			
+		//		for(Buch buchliste : getInhalt()){
+		//		if (buchliste != null) {
+		//			gesamtpreis =+ buchliste.getBruttopreis();
+		//		}
+		//		}
+
 		return gesamtpreis;
 	}
-	
+
 	public String getUeberschrift() {
 		return ueberschrift;
 	}
