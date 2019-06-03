@@ -5,15 +5,17 @@ import java.math.BigInteger;
 public class Fakultaet {
 
 	public static void main(String[] args) {
-		System.out.println(iterativWhile(5));
-		System.out.println(iterativLong(20));
-		System.out.println(iterativBigInteger(40));
+		System.out.println(iterativWhile(20));
+		System.out.println(rekursivLong(20));
+		System.out.println(iterativBigInteger(20));
 	}
 	
-	public static long iterativLong(long n) {
-		if (n == 0) return 1;
-		else return n*iterativLong(n-1);
+	public static long rekursivLong(long n) {
+		if (n == 0) return 1L;
+		else return n*rekursivLong(n-1);
 	}
+	
+		
 	
 	public static BigInteger iterativBigInteger(long n) {
         BigInteger result = BigInteger.ONE;
@@ -26,12 +28,12 @@ public class Fakultaet {
 	
 	
 	public static long iterativWhile(int n) {
-		long fakultaet = 1;
+		long ergebnis = 1L;
 		while (n > 0) {
-			fakultaet = fakultaet * n;
+			ergebnis *= n;
 			n--;
 		}
-		return fakultaet;
+		return ergebnis;
 
 	}
 	
