@@ -44,6 +44,7 @@ public class Buchhaendler {
 		paket1.addBuch(buch3);
 		paket1.addBuch(buch4);
 		paket1.addBuch(buch5);
+		System.out.println(paket1.berechneGesamtpreis(5));
 		//		paket1.printListe();
 		//		System.out.println("Gesamtpreis: " +paket1.berechneGesamtpreis()+ "€");
 

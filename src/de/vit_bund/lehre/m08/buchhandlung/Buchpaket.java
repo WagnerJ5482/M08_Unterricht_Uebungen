@@ -17,67 +17,77 @@ public class Buchpaket {
 		setZaehlerBuecher(0);
 	}
 
-
 	public void addBuch(Buch buch) {
-		if (getZaehlerBuecher()<getInhalt().length) {
+		if (getZaehlerBuecher() < getInhalt().length) {
 			getInhalt()[getZaehlerBuecher()] = buch;
 			setZaehlerBuecher(zaehlerBuecher++);
-		}
-		else
+		} else
 			System.out.println("Das Buchpaket ist voll");
 
-		//		ArrayList<Buch> buchliste = new ArrayList<Buch>(Arrays.asList(getInhalt()));
-		//		buchliste.add(buch);
-		//		while (buchliste.remove(null))
-		//		setInhalt(buchliste.toArray(getInhalt()));
+		// ArrayList<Buch> buchliste = new ArrayList<Buch>(Arrays.asList(getInhalt()));
+		// buchliste.add(buch);
+		// while (buchliste.remove(null))
+		// setInhalt(buchliste.toArray(getInhalt()));
 	}
 
-	public void printListe(){
-		System.out.println("Buchpaket " + getUeberschrift()+ ": ");
-		for(Buch printliste : getInhalt()) {
-			if(printliste != null) {						// k.A. warum !printliste.equals(null) nicht klappt
-				System.out.println(printliste.getTitel()+"; ");
+	public void printListe() {
+		System.out.println("Buchpaket " + getUeberschrift() + ": ");
+		for (Buch printliste : getInhalt()) {
+			if (printliste != null) { // k.A. warum !printliste.equals(null) nicht klappt
+				System.out.println(printliste.getTitel() + "; ");
 			}
 		}
 	}
 
-	public double berechneGesamtpreis() {
+	public double berechneGesamtpreis(int anzahlBuecher) {
 		double gesamtpreis = 0.0;
-		int zaehlerBuchliste = 0;
-		while(zaehlerBuchliste < getInhalt().length 
-				&& getInhalt()[zaehlerBuchliste] != null ) {
-			gesamtpreis += getInhalt()[zaehlerBuchliste].getPreis();
-			zaehlerBuchliste ++;
+		if (anzahlBuecher <= 0) return 0.0;
+		else {
+			if(getInhalt()[anzahlBuecher-1] != null)
+				return (getInhalt()[anzahlBuecher-1].getPreis() + berechneGesamtpreis(anzahlBuecher -1));
+			else return berechneGesamtpreis(anzahlBuecher-1);
 		}
+	}
+		/*
+		 * mit Schleifen-Konstruktion
+		 */
+//		int zaehlerBuchliste = 0;
+//		while(zaehlerBuchliste < getInhalt().length 
+//				&& getInhalt()[zaehlerBuchliste] != null ) {
+//			gesamtpreis += getInhalt()[zaehlerBuchliste].getPreis();
+//			zaehlerBuchliste ++;
+//		}
 
 		// Für Arrays mit Lücken:
-		//		while (zaehlerBuchliste < getInhalt().length) {
-		//			Buch buch = inhalt[zaehlerBuchliste];
-		//			if (buch != null) {
-		//				gesamtpreis += buch.getPreis();
-		//			}
-		//			zaehlerBuchliste++;
-		//		}
+		// while (zaehlerBuchliste < getInhalt().length) {
+		// Buch buch = inhalt[zaehlerBuchliste];
+		// if (buch != null) {
+		// gesamtpreis += buch.getPreis();
+		// }
+		// zaehlerBuchliste++;
+		// }
 
 		// ForEach Schleife:
-		//		for(Buch buchliste : getInhalt()){
-		//		if (buchliste != null) {
-		//			gesamtpreis =+ buchliste.getBruttopreis();
-		//		}
-		//		}
+		// for(Buch buchliste : getInhalt()){
+		// if (buchliste != null) {
+		// gesamtpreis =+ buchliste.getBruttopreis();
+		// }
+		// }
 
-		return gesamtpreis;
-	}
+//	}
 
 	public String getUeberschrift() {
 		return ueberschrift;
 	}
+
 	public void setUeberschrift(String ueberschrift) {
 		this.ueberschrift = ueberschrift;
 	}
+
 	public int getZaehlerBuecher() {
 		return zaehlerBuecher;
 	}
+
 	public void setZaehlerBuecher(int zaehlerBuecher) {
 		this.zaehlerBuecher = zaehlerBuecher;
 	}
@@ -85,9 +95,9 @@ public class Buchpaket {
 	public Buch[] getInhalt() {
 		return inhalt;
 	}
+
 	public void setInhalt(Buch[] inhalt) {
 		this.inhalt = inhalt;
 	}
-
 
 }

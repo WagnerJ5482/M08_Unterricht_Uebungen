@@ -10,7 +10,7 @@ public class Fibonacci {
 	public static void main(String[] args) {
 //		System.out.println(rekursiv(40));
 		System.out.println(iterativ(164));
-		System.out.println(rekursivOptimiert(164));
+//		System.out.println(rekursivOptimiert(164));
 	}
 	
 	
@@ -40,12 +40,12 @@ public class Fibonacci {
 //		stelle++;
 //	}
 
-	public static Long rekursiv(int laufzeit) {
-		if (laufzeit <= 0)
+	public static Long rekursiv(int stelle) {
+		if (stelle <= 0)
 			return 0L;
-		if (laufzeit == 1)
+		if (stelle == 1)
 			return 1L;
-		return rekursiv(laufzeit - 1) + rekursiv(laufzeit - 2);
+		return rekursiv(stelle - 1) + rekursiv(stelle - 2);
 	}
 	
 	public static Long rekursivOptimiert(int laufzeit) {
