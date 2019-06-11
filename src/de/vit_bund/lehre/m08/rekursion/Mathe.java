@@ -1,14 +1,14 @@
 package de.vit_bund.lehre.m08.rekursion;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 public class Mathe {
 
 	public static void main(String[] args) {
-//		System.out.println(add(5, 0));
+		System.out.println(add(5, 0));
 //		System.out.println(multiply(-3, 8));
-//		primzahl(10);
-		System.out.println(Arrays.toString(potenzen2(10)));
+//		System.out.println(Arrays.toString(potenzen2(10)));
 
 	}
 
@@ -27,7 +27,7 @@ public class Mathe {
 			return 0;
 		return a + multiply(a, b - 1);
 	}
-
+	
 	public static void primzahl(int n) {
 			// n : Grenze bis zu der Primzahlen gesucht werden
 			// beginne bei der Zahl 2 da 1 keine Primzahl ist
