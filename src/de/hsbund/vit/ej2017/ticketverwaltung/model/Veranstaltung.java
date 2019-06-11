@@ -13,6 +13,7 @@ public class Veranstaltung {
 		this.kuerzel = kuerzel;
 		this.name = name;
 		this.beschreibung = beschreibung;
+		this.tickets = new Ticket[ticketAnzahl];
 		for (int i = 0; i < ticketAnzahl; i++) {
 			this.tickets[i] = new Ticket(i + 1, false);};// Erstellen des unverkauften Tickets mit der Nummer (i+1) an der Stelle i
 	}

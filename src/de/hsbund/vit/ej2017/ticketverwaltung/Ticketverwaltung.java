@@ -14,8 +14,8 @@ public class Ticketverwaltung {
 	public static void main(String[] args) {
 
 		// Vorbereiten aller Tickets
-		Ticket[] tickets = new Ticket[100];
 		veranstaltungen =  new Veranstaltung[100];
+		veranstaltungErstellen();
 
 //		// Bisher keine Tickets verkauft
 //		boolean isAusverkauft = false;
@@ -50,7 +50,7 @@ public class Ticketverwaltung {
 //		} while (!isAusverkauft);
 
 		// Abschluss nach Ausverkauf der Tickets
-		System.out.println("Die Tickets sind ausverkauft!!");
+//		System.out.println("Die Tickets sind ausverkauft!!");
 
 	}
 
