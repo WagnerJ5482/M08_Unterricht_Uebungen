@@ -15,7 +15,8 @@ public class Ticketverwaltung {
 
 		// Vorbereiten aller Tickets
 		veranstaltungen =  new Veranstaltung[100];
-		veranstaltungErstellen();
+//		veranstaltungErstellen();
+		zeigeMenue();
 
 //		// Bisher keine Tickets verkauft
 //		boolean isAusverkauft = false;
@@ -72,6 +73,29 @@ public class Ticketverwaltung {
 			
 		}
 		
+	}
+	
+	public static void zeigeMenue() {
+		System.out.println("*****************************");
+		System.out.println("Wählen Sie einen der folgenden Menüpunkte: ");
+		System.out.println("liste - Anzeigen der Veranstaltungsliste");
+		System.out.println("neu- Anlegen einer neuer Veranstaltung");
+		System.out.println("kaufen - Kaufen Sie ein neues Veranstaltungstickt");
+		System.out.println("exit - Beenden Sie die Anwendung");
+		String eingabe = Eingabe.leseZeile();
+		switch(eingabe) {
+		case "liste":
+			System.out.println("liste");
+		case "neu":
+			System.out.println("neu");
+		case "kaufen":
+			System.out.println("kaufen");
+		case "exit":
+			break;
+		
+		}
 		
 	}
+	
+	
 }

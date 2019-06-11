@@ -1,10 +1,10 @@
 package de.hsbund.vit.ej2017.ticketverwaltung.model;
 
 public class Veranstaltung {
-	String kuerzel;
-	String name;
-	String beschreibung;
-	Ticket[] tickets;
+	private String kuerzel;
+	private String name;
+	private String beschreibung;
+	private Ticket[] tickets;
 	
 	
 
@@ -16,6 +16,13 @@ public class Veranstaltung {
 		this.tickets = new Ticket[ticketAnzahl];
 		for (int i = 0; i < ticketAnzahl; i++) {
 			this.tickets[i] = new Ticket(i + 1, false);};// Erstellen des unverkauften Tickets mit der Nummer (i+1) an der Stelle i
+	}
+	
+	public boolean verkaufeTickets(int Anzahl) {
+		for(int i = 0; i<tickets.length;i++) {
+			tickets[i].setVerkauft(true);
+		}
+		return true;
 	}
 	
 
