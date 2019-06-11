@@ -16,42 +16,38 @@ public class Ticketverwaltung {
 		// Vorbereiten aller Tickets
 		Ticket[] tickets = new Ticket[100];
 		veranstaltungen =  new Veranstaltung[100];
-		for (int i = 0; i < tickets.length; i++) {
-			// Erstellen des unverkauften Tickets mit der Nummer (i+1) an der Stelle i
-			tickets[i] = new Ticket(i + 1, false);
-		}
 
-		// Bisher keine Tickets verkauft
-		boolean isAusverkauft = false;
-
-		// Wiederholte Abfrage des Ticketverkaufs
-		do {
-			// Zählen der verfügbaren Tickets seit dem letzten Verkauf
-			int anzahlFrei = 0;
-			for (Ticket ticket : tickets) {
-				if (ticket != null && ticket.isVerkauft() == false)
-					anzahlFrei++;
-			}
-			System.out.println("Es sind " + anzahlFrei + " Tickets verf�gbar!");
-
-			// Abfrage der Anzahl der Tickets für den Verkauf
-			System.out.println("Wieviele Tickets möchten Sie kaufen?");
-			int anzahl = Eingabe.leseZahl();
-
-			// Prüfung, ob noch genügend Tickets für gewählte Anzahl
-			if (anzahl <= anzahlFrei) {
-				// Verkauf der nächsten (anzahl) Tickets durch Herunterzählen
-				for (int i = anzahlFrei - 1; i >= anzahlFrei - anzahl; i--) {
-					tickets[i].setVerkauft(true);
-				}
-				// Ausverkauft, wenn die letzten Tickets verkauft wurden
-				if (anzahl == anzahlFrei) {
-					isAusverkauft = true;
-				}
-			} else {
-				System.out.println("Nicht genügend Tickets verf�gbar!");
-			}
-		} while (!isAusverkauft);
+//		// Bisher keine Tickets verkauft
+//		boolean isAusverkauft = false;
+//
+//		// Wiederholte Abfrage des Ticketverkaufs
+//		do {
+//			// Zählen der verfügbaren Tickets seit dem letzten Verkauf
+//			int anzahlFrei = 0;
+//			for (Ticket ticket : tickets) {
+//				if (ticket != null && ticket.isVerkauft() == false)
+//					anzahlFrei++;
+//			}
+//			System.out.println("Es sind " + anzahlFrei + " Tickets verf�gbar!");
+//
+//			// Abfrage der Anzahl der Tickets für den Verkauf
+//			System.out.println("Wieviele Tickets möchten Sie kaufen?");
+//			int anzahl = Eingabe.leseZahl();
+//
+//			// Prüfung, ob noch genügend Tickets für gewählte Anzahl
+//			if (anzahl <= anzahlFrei) {
+//				// Verkauf der nächsten (anzahl) Tickets durch Herunterzählen
+//				for (int i = anzahlFrei - 1; i >= anzahlFrei - anzahl; i--) {
+//					tickets[i].setVerkauft(true);
+//				}
+//				// Ausverkauft, wenn die letzten Tickets verkauft wurden
+//				if (anzahl == anzahlFrei) {
+//					isAusverkauft = true;
+//				}
+//			} else {
+//				System.out.println("Nicht genügend Tickets verf�gbar!");
+//			}
+//		} while (!isAusverkauft);
 
 		// Abschluss nach Ausverkauf der Tickets
 		System.out.println("Die Tickets sind ausverkauft!!");
@@ -71,6 +67,7 @@ public class Ticketverwaltung {
 		for (int i = 0; i <veranstaltungen.length;i++) {
 			if(veranstaltungen[i] == null) {
 				veranstaltungen[i]= veranstaltung;
+				break;
 			}
 			
 		}
