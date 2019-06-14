@@ -7,7 +7,7 @@ public class Abschlussarbeit extends Literatur {
 	private Autor[] autoren;
 	
 	
-	public Abschlussarbeit(String typ, Autor[] autoren) {
+	public Abschlussarbeit(String typ, Autor[] autoren, String titel) {
 		super(titel);
 		this.typ = typ;
 		this.autoren = autoren;
