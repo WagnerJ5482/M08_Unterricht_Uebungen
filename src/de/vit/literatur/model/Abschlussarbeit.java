@@ -2,6 +2,8 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
+//Konstruktor hinzugefügt
+
 public class Abschlussarbeit extends Literatur {
 	private String typ;
 	private Autor[] autoren;
