@@ -10,7 +10,8 @@ public class Sammelband extends Literatur{
 	private Beitrag[] beitraege;
 	
 	
-	public Sammelband(Autor[] herausgeber, Date erscheinungsjahr) {
+	public Sammelband(Autor[] herausgeber, Date erscheinungsjahr, String titel) {
+		super(titel);
 		this.herausgeber = herausgeber;
 		this.erscheinungsjahr = erscheinungsjahr;
 	}
