@@ -1,5 +1,7 @@
 package de.vit.akteure;
 
+import de.vit.literatur.model.Abschlussarbeit;
+import de.vit.literatur.model.Beitrag;
 import de.vit.literatur.model.Buch;
 
 public class Autor {
@@ -7,14 +9,18 @@ public class Autor {
 	private String vorname;
 	private String nachname;
 	private Buch[] werke;
+	private Abschlussarbeit[] abschlussarbeiten;
+	private Beitrag[] beitraege;
 	
 	
-	public Autor(int id, String vorname, String nachname, Buch[] werke) {
+	public Autor(int id, String vorname, String nachname, Buch[] werke, Abschlussarbeit[] abschlussarbeiten, Beitrag[] beitraege) {
 		super();
 		this.id = id;
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.werke = werke;
+		this.abschlussarbeiten = abschlussarbeiten;
+		this.beitraege = beitraege;
 	}
 	public int getId() {
 		return id;
@@ -39,6 +45,18 @@ public class Autor {
 	}
 	public void setWerke(Buch[] werke) {
 		this.werke = werke;
+	}
+	public Abschlussarbeit[] getAbschlussarbeiten() {
+		return abschlussarbeiten;
+	}
+	public void setAbschlussarbeiten(Abschlussarbeit[] abschlussarbeiten) {
+		this.abschlussarbeiten = abschlussarbeiten;
+	}
+	public Beitrag[] getBeitraege() {
+		return beitraege;
+	}
+	public void setBeitraege(Beitrag[] beitraege) {
+		this.beitraege = beitraege;
 	}
 
 }

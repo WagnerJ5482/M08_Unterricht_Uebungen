@@ -43,13 +43,9 @@ public class Adresse {
 		this.hausnummer = hausnummer;
 	}
 
-
-
 	public Ort getOrt() {
 		return ort;
 	}
-
-
 
 	public void setOrt(Ort ort) {
 		this.ort = ort;

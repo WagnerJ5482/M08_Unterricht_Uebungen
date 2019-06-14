@@ -1,6 +1,6 @@
 package de.vit.literatur.model;
 
-public class Buch {
+public class Buch extends Literatur{
 	private String titel;
 	private int ausgabe;
 	private Kapitel kapitel;

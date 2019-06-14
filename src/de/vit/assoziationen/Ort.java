@@ -6,7 +6,6 @@ public class Ort {
 	
 	
 	public Ort(String name, int plz) {
-		super();
 		this.name = name;
 		this.plz = plz;
 	}
