@@ -5,9 +5,9 @@ import de.vit.akteure.Autor;
 public class Literatur {
 	private String titel;
 	
-//	public Literatur(String titel) {
-//		this.titel = titel;
-//	}
+	public Literatur(String titel) {
+		this.titel = titel;
+	}
 	
 	public String getInfo() {
 		return "getInfoAusgabe";
