@@ -64,4 +64,10 @@ public class Sammelband extends Literatur{
 		return autorenNamen + super.getInfo() + " (" + this.getErscheinungsjahr() + ", " + this.beitraege.length + " Beiträge)";
 	}
 
+	@Override
+	public boolean istAutorInvolviert(Autor autor) {
+		// TODO Automatisch generierter Methodenstub
+		return false;
+	}
+
 }

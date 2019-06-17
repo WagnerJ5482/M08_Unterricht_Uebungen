@@ -19,9 +19,8 @@ public abstract class Literatur {
 		return typ;
 	}
 	
-	public boolean istAutorInvolviert(Autor autor) {
-		return true;
-	}
+	public abstract boolean istAutorInvolviert(Autor autor);
+	
 
 	public String getTitel() {
 		return titel;

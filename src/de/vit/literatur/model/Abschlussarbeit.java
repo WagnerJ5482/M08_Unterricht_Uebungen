@@ -48,4 +48,10 @@ public class Abschlussarbeit extends Literatur {
 		return autorenNamen + super.getInfo() + " (" + this.typ + ")";
 	}
 
+	@Override
+	public boolean istAutorInvolviert(Autor autor) {
+		// TODO Automatisch generierter Methodenstub
+		return false;
+	}
+
 }

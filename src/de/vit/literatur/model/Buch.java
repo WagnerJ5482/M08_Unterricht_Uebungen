@@ -67,4 +67,10 @@ public class Buch extends Literatur{
 		}
 		return autorenNamen + super.getInfo() + " (" + this.getAusgabe() + ". Ausg.)";
 	}
+
+	@Override
+	public boolean istAutorInvolviert(Autor autor) {
+		// TODO Automatisch generierter Methodenstub
+		return false;
+	}
 }

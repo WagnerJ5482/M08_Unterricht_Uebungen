@@ -27,6 +27,12 @@ public class Beitrag extends Literatur {
 	public String getBeschreibung() {
 		return super.getBeschreibung() + " im Sammelband " + this.getSammelband().getInfo();
 	}
+
+	@Override
+	public boolean istAutorInvolviert(Autor autor) {
+		// TODO Automatisch generierter Methodenstub
+		return false;
+	}
 	
 	
 }
