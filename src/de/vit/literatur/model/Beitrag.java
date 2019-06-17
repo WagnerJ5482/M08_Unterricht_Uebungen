@@ -23,5 +23,10 @@ public class Beitrag extends Literatur {
 		return sammelband;
 	}
 	
+	@Override
+	public String getBeschreibung() {
+		return super.getBeschreibung() + " im Sammelband " + this.getSammelband().getInfo();
+	}
+	
 	
 }

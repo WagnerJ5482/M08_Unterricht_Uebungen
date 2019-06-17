@@ -1,5 +1,10 @@
 package de.vit.literatur;
 
+import java.sql.Date;
+import java.util.Arrays;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
 import de.vit.akteure.Autor;
 import de.vit.literatur.model.Abschlussarbeit;
 import de.vit.literatur.model.Beitrag;
@@ -9,7 +14,9 @@ import de.vit.literatur.model.Sammelband;
 
 public class Literaturverwaltung {
 	public static void main(String[] args) {
+		
 		Literatur[] literatur = new Literatur[10];
+		
 
 		// Autoren
 		Autor jkr = new Autor("Joan K.", "Rowling");
@@ -45,6 +52,18 @@ public class Literaturverwaltung {
 		buch.getAutoren()[0] = jkr;
 		buch.setBeschreibung("Das sechste Abenteuer für den Zauberschüler mit der Blitznarbe ...");
 		literatur[2] = buch;
+		
+//		System.out.println(l.getInfo());
+//		System.out.println(a.getInfo());
+//		System.out.println(band.getInfo());
+		
+		for(Literatur lit : literatur) {
+			if(lit != null) {
+				System.out.println(lit.getInfo());
+				System.out.println("\t" + lit.getBeschreibung());
+			}
+		}
+		
 	}
 
 }

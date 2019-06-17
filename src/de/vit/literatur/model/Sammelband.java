@@ -1,7 +1,5 @@
 package de.vit.literatur.model;
 
-import java.util.Date;
-
 import de.vit.akteure.Autor;
 
 public class Sammelband extends Literatur{
@@ -38,6 +36,32 @@ public class Sammelband extends Literatur{
 		this.beitraege = beitraege;
 	}
 	
-	
+	@Override
+	public String getBeschreibung() {
+		String beschreibung = super.getBeschreibung();
+		beschreibung += " mit " + this.beitraege.length + " Beiträgen:";
+		for(Beitrag beitrag : this.beitraege) {
+			if(beitrag != null)
+				beschreibung += "\n\t" + beitrag.getInfo();
+		}
+		return beschreibung;
+	}
+	@Override
+	public String getInfo() {
+		String autorenNamen = "";
+		if (this.herausgeber != null) {
+			for (Autor autor : this.herausgeber) {
+				if (autor != null) {
+					// Trennzeichen hinzufügen, wenn nicht erster Herausgeber
+					if (!autorenNamen.equals(""))
+						autorenNamen += ", ";
+					// Name des Autors hinzufügen
+					autorenNamen += autor.getVorname() + " " + autor.getNachname();
+				}
+			}
+			autorenNamen += " (Hrsg.): ";
+		}
+		return autorenNamen + super.getInfo() + " (" + this.getErscheinungsjahr() + ", " + this.beitraege.length + " Beiträge)";
+	}
 
 }

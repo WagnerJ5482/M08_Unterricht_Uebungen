@@ -2,7 +2,7 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
-public class Literatur {
+public abstract class Literatur {
 	private String titel;
 	
 	public Literatur(String titel) {
@@ -10,11 +10,13 @@ public class Literatur {
 	}
 	
 	public String getInfo() {
-		return "getInfoAusgabe";
+		return "Titel: "+getTitel();
 	}
 	
 	public String getBeschreibung() {
-		return "getBeschreibungAusgabe";
+		// Der einfache Klassenname dieser Instanz
+		String typ = this.getClass().getSimpleName();
+		return typ;
 	}
 	
 	public boolean istAutorInvolviert(Autor autor) {

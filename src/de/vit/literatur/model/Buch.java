@@ -10,6 +10,10 @@ public class Buch extends Literatur{
 	private Autor[] autoren;
 	private Kapitel[] kapitel;
 	
+	public Buch(String titel, int ausgabe, int anzahlAutoren, int anzahlKapitel) {
+		this(titel,anzahlAutoren,anzahlKapitel);
+		this.ausgabe = ausgabe;
+	}
 	
 	public Buch(String titel, int ausgabe, int anzahlAutoren) {
 		super(titel);
@@ -45,5 +49,22 @@ public class Buch extends Literatur{
 
 	public void setBeschreibung(String beschreibung) {
 		this.beschreibung = beschreibung;
+	}
+	@Override
+	public String getInfo() {
+		String autorenNamen = "";
+		if(this.autoren != null) {
+			for(Autor autor : this.autoren) {
+				if(autor != null) {
+					// Trennzeichen hinzufügen, wenn nicht erster Autor
+					if(!autorenNamen.equals(""))
+						autorenNamen += ", ";
+					// Name des Autors hinzufügen
+					autorenNamen += autor.getVorname() + " " + autor.getNachname(); 
+				}
+			}
+			autorenNamen += ": ";
+		}
+		return autorenNamen + super.getInfo() + " (" + this.getAusgabe() + ". Ausg.)";
 	}
 }
