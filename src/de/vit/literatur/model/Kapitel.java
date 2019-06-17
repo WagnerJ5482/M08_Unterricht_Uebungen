@@ -1,14 +1,13 @@
 package de.vit.literatur.model;
 
 public class Kapitel {
+	
 	private String titel;
 	private final Buch buch;
 
-	public Kapitel(String titel, Buch buch) {
-		this.titel = titel;
+	public Kapitel(Buch buch) {
 		this.buch = buch;
 	}
-	
 	
 	private Buch getBuch() {
 		return this.buch;

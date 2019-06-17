@@ -1,23 +1,38 @@
 package de.vit.literatur.model;
 
+import de.vit.akteure.Autor;
+
 public class Buch extends Literatur{
+	
 	private int ausgabe;
-	private Kapitel kapitel;
+	private Autor[] autoren;
+	private Kapitel[] kapitel;
 	
 	
-	public Buch(Kapitel kapitel,String titel, int ausgabe) {
+	public Buch(String titel, int ausgabe) {
 		super(titel);
-		this.kapitel = kapitel;
 		this.ausgabe = ausgabe;
 	}
 	
-	public Kapitel getKapitel() {
+	public Kapitel[] getKapitel() {
 		return this.kapitel;
+	}
+	
+	public void setKapitel(Kapitel[] kapitel) {
+		this.kapitel = kapitel;
 	}
 	public int getAusgabe() {
 		return ausgabe;
 	}
 	public void setAusgabe(int ausgabe) {
 		this.ausgabe = ausgabe;
+	}
+
+	public Autor[] getAutoren() {
+		return autoren;
+	}
+
+	public void setAutoren(Autor[] autoren) {
+		this.autoren = autoren;
 	}
 }

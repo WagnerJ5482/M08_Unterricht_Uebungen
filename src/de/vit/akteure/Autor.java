@@ -8,19 +8,20 @@ public class Autor {
 	private int id;
 	private String vorname;
 	private String nachname;
+	
 	private Buch[] werke;
 	private Abschlussarbeit[] abschlussarbeiten;
 	private Beitrag[] beitraege;
 	
+	public Autor() {
+		
+	}
 	
-	public Autor(int id, String vorname, String nachname, Buch[] werke, Abschlussarbeit[] abschlussarbeiten, Beitrag[] beitraege) {
+	public Autor(int id, String vorname, String nachname) {
 		super();
 		this.id = id;
 		this.vorname = vorname;
 		this.nachname = nachname;
-		this.werke = werke;
-		this.abschlussarbeiten = abschlussarbeiten;
-		this.beitraege = beitraege;
 	}
 	public int getId() {
 		return id;

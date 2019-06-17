@@ -11,8 +11,6 @@ public class Beitrag extends Literatur {
 		this.sammelband = sammelband;
 	}
 	
-	
-
 	public Autor[] getAutoren() {
 		return autoren;
 	}
