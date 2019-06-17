@@ -17,9 +17,8 @@ public class Autor {
 		
 	}
 	
-	public Autor(int id, String vorname, String nachname) {
-		super();
-		this.id = id;
+	public Autor(String vorname, String nachname) {
+		this();
 		this.vorname = vorname;
 		this.nachname = nachname;
 	}

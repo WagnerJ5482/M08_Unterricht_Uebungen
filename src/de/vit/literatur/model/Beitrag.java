@@ -6,7 +6,7 @@ public class Beitrag extends Literatur {
 	private final Sammelband sammelband;
 	private Autor[] autoren;
 	
-	public Beitrag (Sammelband sammelband, String titel) {
+	public Beitrag ( String titel, Sammelband sammelband) {
 		super(titel);
 		this.sammelband = sammelband;
 	}
