@@ -10,6 +10,8 @@ public class Beitrag extends Literatur {
 		super(titel);
 		this.sammelband = sammelband;
 	}
+	
+	
 
 	public Autor[] getAutoren() {
 		return autoren;
