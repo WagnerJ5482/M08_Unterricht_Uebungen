@@ -70,7 +70,7 @@ public class Buch extends Literatur{
 
 	@Override
 	public boolean istAutorInvolviert(Autor autor) {
-		// TODO Automatisch generierter Methodenstub
+		
 		return false;
 	}
 }
