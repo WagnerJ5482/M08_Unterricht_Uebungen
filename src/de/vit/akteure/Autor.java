@@ -22,6 +22,18 @@ public class Autor {
 		this.vorname = vorname;
 		this.nachname = nachname;
 	}
+	
+	@Override
+	public boolean equals(Object arg0) {
+		if (arg0 == null || !(arg0 instanceof Autor))
+			return false;
+		if (arg0 == this)
+			return true;
+		Autor autor = (Autor) arg0;
+		return this.nachname.equals(autor.nachname) && this.vorname.equals(autor.vorname);
+	}
+	
+	
 	public int getId() {
 		return id;
 	}
