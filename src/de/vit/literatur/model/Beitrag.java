@@ -2,7 +2,7 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
-public class Beitrag extends Literatur {
+public class Beitrag extends Literatur implements IVerfasst {
 	private final Sammelband sammelband;
 	private Autor[] autoren;
 	

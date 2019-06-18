@@ -3,6 +3,8 @@ package de.vit.akteure;
 import de.vit.literatur.model.Abschlussarbeit;
 import de.vit.literatur.model.Beitrag;
 import de.vit.literatur.model.Buch;
+import de.vit.literatur.model.IHerausgegeben;
+import de.vit.literatur.model.IVerfasst;
 
 public class Autor {
 	private int id;
@@ -12,6 +14,9 @@ public class Autor {
 	private Buch[] werke;
 	private Abschlussarbeit[] abschlussarbeiten;
 	private Beitrag[] beitraege;
+	
+	private IHerausgegeben[] herausgaben;
+	private IVerfasst[] publikationen;
 	
 	public Autor() {
 		

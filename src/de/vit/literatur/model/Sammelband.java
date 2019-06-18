@@ -2,7 +2,7 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
-public class Sammelband extends Literatur{
+public class Sammelband extends Literatur implements IHerausgegeben{
 	private Autor[] herausgeber;
 	private int erscheinungsjahr;
 	private Beitrag[] beitraege;
@@ -64,10 +64,22 @@ public class Sammelband extends Literatur{
 		return autorenNamen + super.getInfo() + " (" + this.getErscheinungsjahr() + ", " + this.beitraege.length + " Beiträge)";
 	}
 
-	@Override
 	public boolean istAutorInvolviert(Autor autor) {
-		// TODO Automatisch generierter Methodenstub
+		if (this.herausgeber != null) {
+			for (Autor hrsg : this.herausgeber) {
+				if (hrsg != null && hrsg.equals(autor))
+					return true;
+			}
+		}
+		if (this.beitraege != null) {
+			for (Beitrag beitrag : this.beitraege) {
+				if (beitrag != null && beitrag.istAutorInvolviert(autor))
+					return true;
+			}
+		}
 		return false;
 	}
+
+
 
 }

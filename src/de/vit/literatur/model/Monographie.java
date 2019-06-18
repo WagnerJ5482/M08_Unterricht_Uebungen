@@ -2,7 +2,7 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
-public abstract class Monographie extends Literatur {
+public abstract class Monographie extends Literatur implements IVerfasst {
 	
 	private Autor[] autoren;
 
