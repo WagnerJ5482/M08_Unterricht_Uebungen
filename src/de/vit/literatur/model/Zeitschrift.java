@@ -2,7 +2,7 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
-public class Zeitschrift extends Literatur {
+public class Zeitschrift extends Literatur implements IHerausgegeben {
 
 	private Autor[] autoren;
 	private Ausgabe[] ausgaben;
@@ -26,6 +26,11 @@ public class Zeitschrift extends Literatur {
 	public boolean istAutorInvolviert(Autor autor) {
 		// TODO Automatisch generierter Methodenstub
 		return false;
+	}
+	@Override
+	public Autor[] getHerausgeber() {
+		// TODO Automatisch generierter Methodenstub
+		return null;
 	}
 
 }

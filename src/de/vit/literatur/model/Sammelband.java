@@ -1,8 +1,10 @@
 package de.vit.literatur.model;
 
+import java.util.Date;
+
 import de.vit.akteure.Autor;
 
-public class Sammelband extends Literatur implements IHerausgegeben{
+public class Sammelband extends Literatur implements IHerausgegeben, IVerleihbar{
 	private Autor[] herausgeber;
 	private int erscheinungsjahr;
 	private Beitrag[] beitraege;
@@ -78,6 +80,30 @@ public class Sammelband extends Literatur implements IHerausgegeben{
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public void ausgeben(String kunde) {
+		// TODO Automatisch generierter Methodenstub
+		
+	}
+
+	@Override
+	public String getAusgegebenAn() {
+		// TODO Automatisch generierter Methodenstub
+		return null;
+	}
+
+	@Override
+	public void verleihen(Date bis) {
+		// TODO Automatisch generierter Methodenstub
+		
+	}
+
+	@Override
+	public Date getVerliehenBis() {
+		// TODO Automatisch generierter Methodenstub
+		return null;
 	}
 
 
