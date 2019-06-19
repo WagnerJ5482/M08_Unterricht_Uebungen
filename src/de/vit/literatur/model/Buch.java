@@ -1,7 +1,5 @@
 package de.vit.literatur.model;
 
-import de.vit.akteure.Autor;
-
 public class Buch extends Monographie{
 	
 	private int ausgabe;
@@ -46,6 +44,7 @@ public class Buch extends Monographie{
 	public String getInfo() {
 		return super.getInfo() + " (" + this.getAusgabe() + ". Ausg.)";
 	}
+
 	
 
 }

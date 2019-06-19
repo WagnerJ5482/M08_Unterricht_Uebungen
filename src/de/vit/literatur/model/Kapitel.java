@@ -9,6 +9,7 @@ public class Kapitel {
 		this.buch = buch;
 	}
 	
+	@SuppressWarnings("unused")
 	private Buch getBuch() {
 		return this.buch;
 	}

@@ -18,7 +18,7 @@ public class Sammelband extends Literatur implements IHerausgegeben{
 	}
 	
 	public Autor[] getHerausgeber() {
-		return herausgeber;
+		return getHerausgeber();
 	}
 	public void setHerausgeber(Autor[] herausgeber) {
 		this.herausgeber = herausgeber;

@@ -1,14 +1,10 @@
 package de.vit.literatur;
 
-import java.sql.Date;
-import java.util.Arrays;
-
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
 import de.vit.akteure.Autor;
 import de.vit.literatur.model.Abschlussarbeit;
 import de.vit.literatur.model.Beitrag;
 import de.vit.literatur.model.Buch;
+import de.vit.literatur.model.IVerfasst;
 import de.vit.literatur.model.Literatur;
 import de.vit.literatur.model.Sammelband;
 
@@ -63,6 +59,12 @@ public class Literaturverwaltung {
 				System.out.println("\t" + lit.getBeschreibung());
 			}
 		}
+		
+		IVerfasst[] publikationen = new IVerfasst[5];
+		publikationen[0]=a;
+		publikationen[1]=buch;
+		publikationen[2]=b1;
+		
 		
 	}
 

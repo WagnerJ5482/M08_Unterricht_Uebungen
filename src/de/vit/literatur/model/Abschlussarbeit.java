@@ -1,5 +1,7 @@
 package de.vit.literatur.model;
 
+import de.vit.akteure.Autor;
+
 public class Abschlussarbeit extends Monographie {
 	private String typ;	
 	
@@ -20,15 +22,14 @@ public class Abschlussarbeit extends Monographie {
 		this.typ = typ;
 	}
 
-
 	public String getBeschreibung() {
 		return getTyp();
 	}
 	
-	
 	public String getInfo() {
 		return super.getInfo() + " (" + this.typ + ")";
 	}
+
 
 
 

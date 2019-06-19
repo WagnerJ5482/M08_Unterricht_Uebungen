@@ -37,7 +37,7 @@ public abstract class Monographie extends Literatur implements IVerfasst {
 	}
 
 	public Autor[] getAutoren() {
-		return autoren;
+		return this.autoren;
 	}
 
 	public void setAutoren(Autor[] autoren) {

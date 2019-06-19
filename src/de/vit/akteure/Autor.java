@@ -1,8 +1,5 @@
 package de.vit.akteure;
 
-import de.vit.literatur.model.Abschlussarbeit;
-import de.vit.literatur.model.Beitrag;
-import de.vit.literatur.model.Buch;
 import de.vit.literatur.model.IHerausgegeben;
 import de.vit.literatur.model.IVerfasst;
 
@@ -10,10 +7,6 @@ public class Autor {
 	private int id;
 	private String vorname;
 	private String nachname;
-	
-	private Buch[] werke;
-	private Abschlussarbeit[] abschlussarbeiten;
-	private Beitrag[] beitraege;
 	
 	private IHerausgegeben[] herausgaben;
 	private IVerfasst[] publikationen;
@@ -57,23 +50,22 @@ public class Autor {
 	public void setNachname(String nachname) {
 		this.nachname = nachname;
 	}
-	public Buch[] getWerke() {
-		return werke;
+
+	public IHerausgegeben[] getHerausgaben() {
+		return herausgaben;
 	}
-	public void setWerke(Buch[] werke) {
-		this.werke = werke;
+
+	public void setHerausgaben(IHerausgegeben[] herausgaben) {
+		this.herausgaben = herausgaben;
 	}
-	public Abschlussarbeit[] getAbschlussarbeiten() {
-		return abschlussarbeiten;
+
+	public IVerfasst[] getPublikationen() {
+		return publikationen;
 	}
-	public void setAbschlussarbeiten(Abschlussarbeit[] abschlussarbeiten) {
-		this.abschlussarbeiten = abschlussarbeiten;
+
+	public void setPublikationen(IVerfasst[] publikationen) {
+		this.publikationen = publikationen;
 	}
-	public Beitrag[] getBeitraege() {
-		return beitraege;
-	}
-	public void setBeitraege(Beitrag[] beitraege) {
-		this.beitraege = beitraege;
-	}
+
 
 }

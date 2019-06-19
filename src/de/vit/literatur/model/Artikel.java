@@ -2,7 +2,7 @@ package de.vit.literatur.model;
 
 import de.vit.akteure.Autor;
 
-public class Artikel extends Literatur {
+public class Artikel extends Literatur implements IVerfasst {
 
 	private final Autor[] autoren;
 	private Ausgabe ausgabe;
@@ -27,6 +27,19 @@ public class Artikel extends Literatur {
 	@Override
 	public boolean istAutorInvolviert(Autor autor) {
 		return false;
+	}
+
+	@Override
+	public Autor[] getAutoren() {
+		return this.autoren;
+	}
+
+	public Ausgabe getAusgabe() {
+		return ausgabe;
+	}
+
+	public void setAusgabe(Ausgabe ausgabe) {
+		this.ausgabe = ausgabe;
 	}
 
 }
