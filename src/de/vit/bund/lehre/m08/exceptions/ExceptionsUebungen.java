@@ -10,21 +10,21 @@ public class ExceptionsUebungen {
 //			System.out.println("leerer Name: " + ex);
 		}
 		try {
-			division(3, 0);
+//			division(3, 0);
 		} catch (ArithmeticException aex) {
 //			System.out.println("eine mathematische exception: " + aex);
 		} catch (Exception ex) {
 //			System.out.println("eine andere exception: " + ex);
 
 		}
-		GeraderWert gerade = new GeraderWert();
-		for (int x=0; x <= 25; x++) {
-			try {
-				gerade.setWert(x);
-			} catch (Exception e) {
-//				System.out.println(e);
-			}
-		}
+//		GeraderWert gerade = new GeraderWert();
+//		for (int x=0; x <= 25; x++) {
+//			try {
+//				gerade.setWert(x);
+//			} catch (Exception e) {
+//				System.out.println(e.getMessage());
+//			}
+//		}
 		
 		GeraderWert[] array = new GeraderWert[10];
 		for (int i = 0; i<array.length;i++) {
@@ -39,18 +39,18 @@ public class ExceptionsUebungen {
 			}
 			
 		}
-		for(GeraderWert gw : array) {
-			try {
-				System.out.print(gw.toString());
-			} catch (NullPointerException e) {
-				System.out.print("\t Null \t");
-			}
-			;
-		}
+//		for(GeraderWert gw : array) {
+//			try {
+//				System.out.print(gw.toString());
+//			} catch (NullPointerException e) {
+//				System.out.print("\t Null \t");
+//			}
+//			;
+//		}
 		
 	}
 
-	static double division(int zaehler, int nenner) throws Exception {
-		return zaehler / nenner;
-	}
+//	static double division(int zaehler, int nenner) throws Exception {
+//		return zaehler / nenner;
+//	}
 }
