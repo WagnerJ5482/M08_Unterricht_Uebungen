@@ -24,35 +24,35 @@ public class Array_Aufgaben03 {
 //	for (int i=wochentage.length-1;i>=0;i--) {
 //		System.out.println(wochentage[i]);
 //	}
-	
-	/*
-	 * Zweidimensionales Array:
-	 * 
-	 */
-
-	String[][] stundenplan = new String[5][4];
-	
-	for (int tagId = 0; tagId<stundenplan.length;tagId++) {
-		for (int zeID=0;zeID<stundenplan[tagId].length;zeID++) {
-			stundenplan[tagId][zeID]="vorlesungsfrei";
-			}
-		}
-	stundenplan[0][2] = "M12"; // Montag 2.Einheit
-	stundenplan[1][0] = "M12"; // Dienstag 1. Einheit
-	stundenplan[2][1] = "M08"; // Mittwoch 2. Einheit
-	stundenplan[1][1] = "M12"; // Dienstag 2. Einheit
-	stundenplan[1][3] = "Uebung M08"; // Dienstag 4. Einheit
-	
-	stundenplan[0][3] = stundenplan[0][1];
-	
-	for (int tagId = 0; tagId<stundenplan.length;tagId++) {
-		for (int zeId=0;zeId<stundenplan[tagId].length;zeId++) {
-			System.out.print(stundenplan[tagId][zeId] + "\t");	
-			}
-		System.out.println();
-		}
-
-	System.out.println(findeErsteZE(stundenplan, wochentage));
+//	
+//	/*
+//	 * Zweidimensionales Array:
+//	 * 
+//	 */
+//
+//	String[][] stundenplan = new String[5][4];
+//	
+//	for (int tagId = 0; tagId<stundenplan.length;tagId++) {
+//		for (int zeID=0;zeID<stundenplan[tagId].length;zeID++) {
+//			stundenplan[tagId][zeID]="vorlesungsfrei";
+//			}
+//		}
+//	stundenplan[0][2] = "M12"; // Montag 2.Einheit
+//	stundenplan[1][0] = "M12"; // Dienstag 1. Einheit
+//	stundenplan[2][1] = "M08"; // Mittwoch 2. Einheit
+//	stundenplan[1][1] = "M12"; // Dienstag 2. Einheit
+//	stundenplan[1][3] = "Uebung M08"; // Dienstag 4. Einheit
+//	
+//	stundenplan[0][3] = stundenplan[0][1];
+//	
+//	for (int tagId = 0; tagId<stundenplan.length;tagId++) {
+//		for (int zeId=0;zeId<stundenplan[tagId].length;zeId++) {
+//			System.out.print(stundenplan[tagId][zeId] + "\t");	
+//			}
+//		System.out.println();
+//		}
+//
+//	System.out.println(findeErsteZE(stundenplan, wochentage));
 	/*
 	 * mit for-Each Schleife
 	 */
@@ -101,42 +101,44 @@ public class Array_Aufgaben03 {
 	 * 
 	 */
 	//for-Schleife
-//	int n=10;
-//	
-//	if (n <=0) {
-//		System.out.println("Bad...");
-//	}else {
-//	for (double i=3;i<2*n;i+=2) {
-////		System.out.println(i/((2*i)+1));
+	int n=10;
+	
+	if (n <=0) {
+		System.out.println("Bad...");
+	}else {
+	for (double i=3;i<2*n;i+=2) {
+		System.out.println(i/((2*i)+1));
 //		System.out.println(i);
-//	}
-//	}
-	/**
+	}
+	}
+	System.out.println("#################");
+	
 // 	while-Schleife
 	int n1 =10;
 	double i1=3;
 	if (n1 >0) {
 		while (i1<2*n1) {
-//			System.out.println(i1/((2*i1)+1));
-			System.out.println(i1);
+			System.out.println(i1/((2*i1)+1));
+//			System.out.println(i1);
 			i1+=2;
 		}
 	}else {
 		System.out.println("Bad...");
 	}
+	System.out.println("#################");
 //	do-while
 	int n2 =10;
 	double i2=3;
 	if (n2 > 0) {
 		do {
-//			System.out.println(i2/((2*i2)+1));
-			System.out.println(i2);
+			System.out.println(i2/((2*i2)+1));
+//			System.out.println(i2);
 			i2+=2;
 		} while (i2<=2*n2);
 	}else {
 		System.out.println("Bad...");
 	}
-*/
+	System.out.println("#################");
 	
 	// Aufgabe while Schleife
 //	int i1 =-5;
