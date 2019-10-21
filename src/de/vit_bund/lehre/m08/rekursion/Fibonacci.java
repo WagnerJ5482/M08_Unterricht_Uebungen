@@ -3,6 +3,7 @@ package de.vit_bund.lehre.m08.rekursion;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.math.BigInteger;
 import java.text.NumberFormat;
 
 public class Fibonacci {
@@ -38,6 +39,12 @@ public class Fibonacci {
 //		;
 //		printer.println("-----------------");
 //		stelle++;
+//	}
+	
+//	public static BigInteger rekursivBig(BigInteger stelle) {
+//		if (stelle.compareTo(BigInteger.ZERO)==0) return BigInteger.ZERO;
+//		if (stelle.compareTo(BigInteger.ONE)==1) return BigInteger.ONE;
+//		return rekursivBig(stelle.min(BigInteger.ONE)).add(rekursivBig(stelle.min(BigInteger.One).add()));
 //	}
 
 	public static Long rekursiv(int stelle) {
